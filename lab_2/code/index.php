@@ -178,3 +178,66 @@ function sumcifrinschisl($int){
 }
 $chislo = sumcifrinschisl(12345);
 echo "\n",$chislo;
+echo "\n";
+
+//task 17
+function fillArray($value, $cnt)
+{
+    $array = [];
+    for ($i = 0; $i < $cnt; $i++)
+    {
+        $array[] = str_repeat($value, $i + 1);
+    }
+    return $array;
+}
+
+foreach (fillArray("x", 5) as $stolbik) echo "\n$stolbik";
+
+$array =  [[1, 2, 3], [4, 5], [6]];
+function Sum(array $arr): int {
+    $cnt = 0;
+    foreach ($arr as $array) {
+        foreach ($array as $chisla) {
+            $cnt += $chisla;
+        }
+    }
+    return $cnt;
+}
+echo"\nСумма элементов: ",Sum($array);
+
+$array = [];
+$count = 1;
+for ($i = 0; $i < 3; $i++) {
+    $subArray = [];
+    for ($j = 0; $j < 3; $j++) {
+        $subArray[] = $count++;
+    }
+    $array[] = $subArray;
+}
+foreach ($array as $subArray) {
+    echo "\n";
+    echo "[";
+    $lastIndex = count($subArray) - 1;
+    foreach ($subArray as $index => $value) {
+        echo $value;
+        if ($index !== $lastIndex) {
+            echo ", ";
+        }
+    }
+    echo "]";
+}
+
+$array = [2, 5, 3, 9];
+$result = ($array[0] * $array[1]) + ($array[2] * $array[3]);
+echo "\nРезультат сложения произведений: $result";
+
+$user = ['name' => 'Игорь', 'surname' => 'Смирнов', 'patronymic' => 'Александрович'];
+echo "\nНе узнали меня, это же я ", $user['surname'] . ' ' . $user['name'] . ' ' . $user['patronymic'];
+
+$date = ['year' => date('Y'), 'month' => date('m'), 'day' => date('d')];
+echo "\n",$date['year'] . '-' . $date['month'] . '-' . $date['day'];
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "\nКоличество элементов массива: ",count($arr);
+echo"\n";
+echo"Последний и предпоследний: $arr[4],$arr[3]";
