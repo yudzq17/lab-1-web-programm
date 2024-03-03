@@ -57,7 +57,7 @@ echo "\n";
 $a= 10;
 $b= 3;
 $m = $a%$b;
-if($m === 0)
+if($m == 0)
     echo "Делится";
 else
     echo "Делится с остатком, остаток равен $m";
@@ -111,7 +111,7 @@ $ch = 30;
 echo"\nДелители числа $ch: ";
 $ar30 = [];
 for ($i = 1; $i <= $ch; $i++)
-    if ($ch%$i === 0)
+    if ($ch%$i == 0)
         Array_push($ar30, $i);
 foreach($ar30 as $chissla) echo "$chissla ";
 
@@ -241,3 +241,46 @@ $arr = ['a', 'b', 'c', 'd', 'e'];
 echo "\nКоличество элементов массива: ",count($arr);
 echo"\n";
 echo"Последний и предпоследний: $arr[4],$arr[3]";
+echo"\n";
+//task 18
+function dvainta($int, $int1){
+    if ($int + $int1 >10)
+        return "Cумма двух чисел больше 10 - true";
+    else
+        return "Сумма двух чисел меньше 10 - false";
+}
+$ina = dvainta(5, 10);
+echo"\n",$ina;
+
+function ravnyinta($int, $int1){
+    if ($int == $int1)
+        return "Числа равны - true";
+    else
+        return "Числа разные - false";
+}
+$ina1 = ravnyinta(5, 10);
+echo"\n",$ina1;
+echo"\n";
+
+$test =0;
+if ($test == 0) echo 'верно';
+
+
+$age = 52;
+if ($age <10 or $age>99)
+    echo "Вы либо ребенок либо долгожитель конкретный";
+else
+    $sum = 0;
+    while ($age > 0)
+    {
+        $sum += $age % 10;
+        $age = (int)($age / 10);
+    }
+    if ($sum > 9) echo"\nсумма цифр двузначна: $sum";
+    else echo"\nсумма цифр однозначна: $sum";
+
+$arr = [1,2,3];
+if (count($arr) == 3)
+    echo"\nСумма элементов массива:", array_sum($arr);
+
+
