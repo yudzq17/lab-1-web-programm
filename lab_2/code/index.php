@@ -26,7 +26,7 @@ echo "\nНасколько больше я потратил в прошлом м
 echo "\n";
 echo "\n";
 
-//task 3 - umnozhenie and delenie
+//task 11 - umnozhenie and delenie
 $num_languages = 4;
 $months = 11;
 $days = $months * 16;
@@ -35,5 +35,9 @@ echo "сколько дней в среднем у нее ушло на изуч
 echo "\n";
 echo "\n";
 
-//task 4 - stepen
+//task 12 - stepen
 echo 8**2;
+echo "\n";
+echo "\n";
+
+//task 5 -
