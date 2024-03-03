@@ -123,3 +123,11 @@ while ($sum<=10){
     $cnt += 1;
 }
 echo"\nЧтобы сумма была больше 10 нужно сложить $cnt первых чисел";
+echo "\n";
+//task 15 - functions1
+function printStringReturnNumber($string): int {
+    echo "\n$string";
+    return 52;
+}
+$myNum = printStringReturnNumber("Строка: ");
+echo "myNum = $myNum";
