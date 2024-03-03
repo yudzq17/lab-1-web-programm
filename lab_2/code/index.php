@@ -180,7 +180,7 @@ $chislo = sumcifrinschisl(12345);
 echo "\n",$chislo;
 echo "\n";
 
-//task 17
+//task 17 arrays
 function fillArray($value, $cnt)
 {
     $array = [];
@@ -242,7 +242,8 @@ echo "\nКоличество элементов массива: ",count($arr);
 echo"\n";
 echo"Последний и предпоследний: $arr[4],$arr[3]";
 echo"\n";
-//task 18
+
+//task 18 if else
 function dvainta($int, $int1){
     if ($int + $int1 >10)
         return "Cумма двух чисел больше 10 - true";
@@ -282,5 +283,17 @@ else
 $arr = [1,2,3];
 if (count($arr) == 3)
     echo"\nСумма элементов массива:", array_sum($arr);
+echo"\n";
+
+//task 19 - da eto zhe cikly oh my god
+$cnt_strok = 20;
+$cnt = 0;
+$str = "x";
+while($cnt<$cnt_strok){
+    echo "\n",$str;
+    $str = $str."x";
+    $cnt +=1;
+}
+
 
 
