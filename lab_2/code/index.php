@@ -35,7 +35,7 @@ echo "сколько дней в среднем у нее ушло на изуч
 echo "\n";
 echo "\n";
 
-//task 12 - stepen
+//task  12 - stepen
 echo 8**2;
 echo "\n";
 echo "\n";
