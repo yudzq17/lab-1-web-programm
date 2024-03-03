@@ -10,7 +10,7 @@ $order.= " from kfc is the best dish";
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
-
+echo "\n";
 //task 2 - chisla
 $a = 78;
 echo "\n$a";
@@ -22,3 +22,11 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 $d = $last_month - $this_month;
 echo "\nНасколько больше я потратил в прошлом месяце, чем в этом месяце? На $d ";
+echo "\n";
+echo "\n";
+//task 3 - umnozhenie and delenie
+$num_languages = 4;
+$months = 11;
+$days = $months * 16;
+$days_per_language = $days/$num_languages;
+echo "сколько дней в среднем у нее ушло на изучение каждого языка? $days_per_language";
