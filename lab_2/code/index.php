@@ -294,6 +294,42 @@ while($cnt<$cnt_strok){
     $str = $str."x";
     $cnt +=1;
 }
+echo"\n";
 
+//task 20 - kombinacii
+$array = [1,2,3,4,5,6];
+$srarifm = array_sum($array)/count($array);
+echo"\nСреднее арифмитическое равно: ",$srarifm;
+
+$first_el = 1;
+$last_el = 100;
+$S_ar_prog = ((2*$first_el+($last_el -1))*$last_el)/2;
+echo"\nСумма арифметической прогрессии равна: $S_ar_prog";
+
+echo"\nМассив с квадратными корнями чисел: ";
+echo"[ ";
+$ar = [144, 169, 256, 81];
+$newar = array_map('sqrt',$ar);
+echo implode(" ", $newar);echo"]";
+
+$al = ['a' => '1', 'b' => '2', 'c' => '3', 'd' => '4', 'e' => '5', 'f' => '6', 'g' => '7', 'h' => '8',
+       'i' => '9', 'j' => '10', 'k' => '11', 'l' => '12', 'm' => '13', 'n' => '14', 'o' => '15', 'p' => '16',
+       'q' => '17', 'r' => '18', 's' => '19', 't' => '20', 'u' => '21', 'v' => '22', 'w' => '23', 'x' => '24',
+       'y' => '25', 'z' => '26'];
+$array = [$al['a'], $al['b'], $al['c'], $al['d'], $al['e'], $al['f'], $al['g'], $al['h'], $al['i'], $al['j'], $al['k'],
+          $al['l'], $al['m'], $al['n'], $al['o'], $al['p'], $al['q'], $al['r'], $al['s'], $al['t'], $al['u'], $al['v'],
+          $al['w'], $al['x'], $al['y'], $al['z']];
+echo"\nМассив из букв(нет): ";
+echo"[ ";
+echo implode(" ", $array);echo"]";
+
+$string = '1234567890';
+$sub1 = substr($string,0,2);
+$sub2 = substr($string,2,2);
+$sub3 = substr($string,4,2);
+$sub4 = substr($string,6,2);
+$sub5 = substr($string,8,2);
+$sum = $sub1+$sub2+$sub3+$sub4+$sub5;
+echo"\nCумма пар чисел: ",$sum;
 
 
