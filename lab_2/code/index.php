@@ -10,3 +10,15 @@ $order.= " from kfc is the best dish";
 
 // Don't change the line below
 echo "\nYour order is: $very_bad_unclear_name.";
+
+//task 2 - chisla
+$a = 78;
+echo "\n$a";
+$b = 6.5;
+echo "\n$b";
+$c = $a / $b;
+echo "\n$c";
+$last_month = 1187.23;
+$this_month = 1089.98;
+$d = $last_month - $this_month;
+echo "\nНасколько больше я потратил в прошлом месяце, чем в этом месяце? На $d ";
