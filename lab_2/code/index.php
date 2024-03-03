@@ -52,3 +52,74 @@ $answer -= $my_num;
 echo "\nРЕзультат: $answer";
 echo "\n";
 echo "\n";
+
+// task 14 -math functions
+$a= 10;
+$b= 3;
+$m = $a%$b;
+if($m === 0)
+    echo "Делится";
+else
+    echo "Делится с остатком, остаток равен $m";
+
+$st = pow(2,10);
+echo "\n$st";
+$sq = sqrt(245);
+echo"\n$sq";
+$array = [4, 2, 5, 19, 13, 0, 10];
+$sum = 0;
+foreach ($array as $value) {
+    $sum += $value ** 2;
+}
+$sq2 = sqrt($sum);
+echo "\n$sq2";
+
+echo "\nКорень квадратный из 379: ", sqrt(379);
+echo "\nРезультат округлен до целых: ", round(sqrt(379));
+echo "\nРезультат округлен до десятых: ", round(sqrt(379), 1);
+echo "\nРезультат округлен до сотых: ", round(sqrt(379), 2);
+
+echo "\nКорень квадратный из 587: ", sqrt(579);
+$round = ["floor" => floor(sqrt(587)), "ceil" => ceil(sqrt(587))];
+echo "\nОкругление в меньшую сторону: ", $round["floor"];
+echo "\nОкругление в большую сторону: ", $round["ceil"];
+$array =[4, -2, 5, 19, -130, 0, 10];
+$mina = min($array);
+$maxa = max($array);
+echo "\nМинимальный $mina, максимальный $maxa";
+
+echo"\nРандомное число: ", rand(1,100);
+$cnt = 0;
+$arr = [];
+echo"\nМассив с рандомными чисалми: ";
+while ($cnt < 10) {
+    Array_push($arr, rand());
+    $cnt += 1;
+}
+foreach($arr as $chisla) echo "$chisla ";
+
+$a = 10;
+$b = 11;
+$abs = abs($a-$b);
+echo "\nМодуль разности: $abs";
+echo"\nТрансформер массив: ";
+$arrrr = [1, 2, -1, -2, 3, -3];
+$newarrr = array_map('abs',$arrrr);
+foreach($newarrr as $chiselki) echo "$chiselki ";
+
+$ch = 30;
+echo"\nДелители числа $ch: ";
+$ar30 = [];
+for ($i = 1; $i <= $ch; $i++)
+    if ($ch%$i === 0)
+        Array_push($ar30, $i);
+foreach($ar30 as $chissla) echo "$chissla ";
+
+$num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$sum = 0;
+$cnt = 0;
+while ($sum<=10){
+    $sum += $num[$cnt];
+    $cnt += 1;
+}
+echo"\nЧтобы сумма была больше 10 нужно сложить $cnt первых чисел";
