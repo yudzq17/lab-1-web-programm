@@ -124,10 +124,57 @@ while ($sum<=10){
 }
 echo"\nЧтобы сумма была больше 10 нужно сложить $cnt первых чисел";
 echo "\n";
+
 //task 15 - functions1
 function printStringReturnNumber($string): int {
     echo "\n$string";
     return 52;
 }
 $myNum = printStringReturnNumber("Строка: ");
-echo "myNum = $myNum";
+echo "Мое число = $myNum";
+echo "\n";
+echo "\n";
+
+//task 16 - func2
+function increaseEnthusiasm($string): string {
+    return $string."!";
+}
+$mystring = increaseEnthusiasm("я смирнов игорь");
+echo $mystring;
+echo "\n";
+function repeatThreeTimes($string): string{
+    return str_repeat($string, 3);
+}
+$mystring = repeatThreeTimes(" я смирнов игорь");
+echo $mystring;
+echo "\n", increaseEnthusiasm(repeatThreeTimes(" я смирнов игорь"));
+
+function cut($str, $length = 10)
+{
+    return substr($str, 0, $length);
+}
+echo "\n", cut("igor", 2);
+function printArray($arr, $index = 0) {
+    if ($index < count($arr)) {
+        echo $arr[$index] . " ";
+        printArray($arr, $index + 1);
+    }
+}
+$array = [1, 2, 3, 4, 5];
+echo"\n",printArray($array);
+
+function sumcifrinschisl($int){
+    $sum = 0;
+    while ($int > 0)
+    {
+        $sum += $int % 10;
+        $int = (int)($int / 10);
+    }
+    if ($sum > 9)
+    {
+        return sumcifrinschisl($sum);
+    }
+    return $sum;
+}
+$chislo = sumcifrinschisl(12345);
+echo "\n",$chislo;
