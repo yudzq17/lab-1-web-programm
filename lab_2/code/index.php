@@ -40,4 +40,15 @@ echo 8**2;
 echo "\n";
 echo "\n";
 
-//task 5 -
+//task 13 - operator prisvoenija
+$my_num = 2;
+$answer = $my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
+
+echo "\nРЕзультат: $answer";
+echo "\n";
+echo "\n";
