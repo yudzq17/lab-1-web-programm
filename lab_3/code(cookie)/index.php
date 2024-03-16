@@ -1,52 +1,24 @@
-<?php
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получаем данные из формы
-    $name = $_POST["name"];
-    $age = $_POST["age"];
-    $salary = $_POST["salary"];
-    $sp = $_POST["sp"];
-
-    // Создаем массив с данными
-    $userData = array(
-        'name' => $name,
-        'age' => $age,
-        'salary' => $salary,
-        'sp' => $sp
-    );
-
-    // Сохраняем массив в сессию
-    $_SESSION['userData'] = $userData;
-
-    // Перенаправляем пользователя на другую страницу
-    header("Location: display.php");
-    exit();
-}
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Word and Character Count</title>
 </head>
 <body>
 <form method="post">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name"><br>
-
-    <label for="age">Age:</label><br>
-    <input type="text" id="age" name="age"><br>
-
-    <label for="salary">Salary:</label><br>
-    <input type="text" id="salary" name="salary"><br>
-
-    <label for="sp">Sp:</label><br>
-    <input type="text" id="sp" name="sp"><br>
-
-    <input type="submit" value="Submit">
+    <textarea name="text" rows="4" cols="50"></textarea><br>
+    <input type="submit" name="submit" value="Count">
 </form>
+
+<?php
+if(isset($_POST['submit'])&& !empty($_POST['text'])){
+        $text = $_POST['text'];
+        $word_count = str_word_count($text);
+        $char_count = strlen($text);
+
+        echo "Количесвто слов: $word_count<br>";
+        echo "Количесвтво букв: $char_count";
+    }
+else echo "Сначала напишите что-нибудь";
+?>
 </body>
 </html>
