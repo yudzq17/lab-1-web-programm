@@ -1,18 +1,23 @@
 <?php
-// Начало сессии
 session_start();
 
-// Проверяем, была ли отправлена форма
-if ("POST"== $_SERVER["REQUEST_METHOD"]) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получаем данные из формы
-    $surname = $_POST["surname"];
     $name = $_POST["name"];
     $age = $_POST["age"];
+    $salary = $_POST["salary"];
+    $sp = $_POST["sp"];
 
-    // Записываем данные в сессию
-    $_SESSION["surname"] = $surname;
-    $_SESSION["name"] = $name;
-    $_SESSION["age"] = $age;
+    // Создаем массив с данными
+    $userData = array(
+        'name' => $name,
+        'age' => $age,
+        'salary' => $salary,
+        'sp' => $sp
+    );
+
+    // Сохраняем массив в сессию
+    $_SESSION['userData'] = $userData;
 
     // Перенаправляем пользователя на другую страницу
     header("Location: display.php");
@@ -29,16 +34,19 @@ if ("POST"== $_SERVER["REQUEST_METHOD"]) {
 </head>
 <body>
 <form method="post">
-    <label for="surname">Фамилия:</label>
-    <input type="text" id="surname" name="surname" required><br><br>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
 
-    <label for="name">Имя:</label>
-    <input type="text" id="name" name="name" required><br><br>
+    <label for="age">Age:</label><br>
+    <input type="text" id="age" name="age"><br>
 
-    <label for="age">Возраст:</label>
-    <input type="number" id="age" name="age" required><br><br>
+    <label for="salary">Salary:</label><br>
+    <input type="text" id="salary" name="salary"><br>
 
-    <input type="submit" value="Отправить">
+    <label for="sp">Sp:</label><br>
+    <input type="text" id="sp" name="sp"><br>
+
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>
