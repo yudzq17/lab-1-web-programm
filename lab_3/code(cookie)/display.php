@@ -8,7 +8,6 @@ if (isset($_SESSION["surname"]) && isset($_SESSION["name"]) && isset($_SESSION["
     echo "Фамилия: " . $_SESSION["surname"] . "<br>";
     echo "Имя: " . $_SESSION["name"] . "<br>";
     echo "Возраст: " . $_SESSION["age"] . "<br>";
-} else {
-    echo "Данные не найдены в сессии.";
 }
+else echo "Данные не найдены в сессии.";
 ?>
