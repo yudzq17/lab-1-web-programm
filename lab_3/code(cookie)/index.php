@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ("POST" === $_SERVER["REQUEST_METHOD"]) {
     // Получаем данные из формы
     $name = $_POST["name"];
     $age = $_POST["age"];
