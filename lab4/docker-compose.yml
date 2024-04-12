@@ -5,12 +5,12 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./code(files):/code(files)
+      - ./code:/code
       - ./site.conf:/etc/nginx/conf.d/site.conf
     links:
       - php
   php:
     image: php:8.3-fpm
     volumes:
-      - ./code(files):/code(files)
+      - ./code:/code
 
