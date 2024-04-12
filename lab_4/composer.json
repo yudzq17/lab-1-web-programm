@@ -1,0 +1,13 @@
+{
+    "name": "harry/lab_4",
+    "description": "fmkew",
+    "type": "project",
+    "license": "no",
+    "authors": [
+        {
+            "name": "harry"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
