@@ -1,0 +1,9 @@
+{   "version": "11.0.0",
+    "name": "harry/lab4",
+    "type": "project",
+    "license": "GPL-3.0",
+    "minimum-stability": "stable",
+    "require": {
+        "google/apiclient": "*"
+    }
+}
