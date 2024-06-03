@@ -1,6 +1,15 @@
 version: "3.8"
 services:
-  web:
+  php:
+    build: .
+    volumes:
+      - ./code:/code
+    depends_on:
+      - db
+    links:
+      - db
+
+  nginx:
     image: nginx:latest
     ports:
       - "8080:80"
@@ -9,8 +18,10 @@ services:
       - ./site.conf:/etc/nginx/conf.d/site.conf
     links:
       - php
-  php:
-    image: php:8.3-fpm
-    volumes:
-      - ./code:/code
 
+  db:
+    image: mysql:8.0
+    ports:
+      - "6603:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: helloworld
